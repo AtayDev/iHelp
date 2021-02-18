@@ -25,6 +25,67 @@
 		
 		
 		<div class="content"> <p>Vous êtes ${ sessionScope.dona_fname } ${ sessionScope.dona_id } !</p></div>
+			
+				
+			<form  action="hey.filterByType_servlet" method="get">
+			   
+				
+				
+				<select name="type" class="input-box">
+   			         
+      					<option value="Financement">Financement</option>
+       					<option value="Benevolat">Benevolat</option>
+      			</select>
+				
+				<button type="submit" class="signup-btn" class="input-box">Filtrer</button>
+				
+							
+			</form> 
+			<form  action="hey.filterByStatut_servlet" method="get">
+			 
+				
+				
+				<select name="statut" class="input-box">
+   			            <option value="" disabled selected>Statut de votre projet</option>
+      					<option value="Urgent">Urgent</option>
+       					<option value="Normal">Normal</option>
+       					<option value="Bas">Bas</option>
+      			</select>
+				
+				<button type="submit" class="signup-btn" class="input-box">Filtrer</button>
+				
+							
+			</form> 
+			<form  action="hey.filterByRating_servlet" method="get">
+			 
+				
+				<button type="submit" class="signup-btn" class="input-box">Filtrer</button>
+				
+							
+			</form> 
+			<form  action="hey.filterByVille_servlet" method="get">
+			 
+				
+				
+				<select name="ville" class="input-box">
+   			            <option value="" disabled selected>Statut de votre projet</option>
+      					<option value="Rabat">Rabat</option>
+       					<option value="Casablanca">Casablanca</option>
+       					<option value="Tanger">Tanger</option>
+       					<option value="Marrakech">Marrakech</option>
+       					<option value="Casablanca">Fes</option>
+       					<option value="Tanger">Meknes</option>
+      			</select>
+				
+				<button type="submit" class="signup-btn" class="input-box">Filtrer</button>
+				
+							
+			</form> 
+		
+		
+			
+			
+			
 			<div class="Voila"><h1>Voila quelques projets que vous pouvez soutenir!</h1></div>
 			<ul class="cards">
 			<c:forEach items="${demandesList}" var="d">

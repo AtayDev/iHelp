@@ -10,4 +10,8 @@ public interface IDemande {
 	List<Demande> getAllDemands();
 	boolean updateDemandeF(Demande demande);
 	boolean updateDemandeB(Demande demande);
+	List<Demande> getDemandeByType(String type);
+	List<Demande> getDemandeByStatut(String statut);
+	List<Demande> getDemandeByRating();
+	List<Demande> getDemandeByVille(String ville);
 }

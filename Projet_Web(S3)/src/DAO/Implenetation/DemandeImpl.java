@@ -195,4 +195,188 @@ public class DemandeImpl implements IDemande {
 	        return false;
 	    }
 
+
+
+	@Override
+	public List<Demande> getDemandeByType(String type) {
+		List<Demande> demandes=new ArrayList<Demande>();
+		String query = "SELECT * FROM DEMANDE WHERE dem_type='"+type+"'";
+		Connection connection= SingletonConnection.getConnection();
+		try {
+			PreparedStatement ps=connection.prepareStatement(query);
+            
+            ResultSet resultSet = ps.executeQuery(query);
+            while(resultSet.next()) {
+        	   	  Demande demande = new Demande();
+        		  demande.setDem_id(resultSet.getInt("dem_id"));
+        		  demande.setDemandeur_id(resultSet.getInt("demandeur_id"));
+        		  demande.setDem_titre(resultSet.getString("dem_titre"));
+        		  demande.setDem_ville(resultSet.getString("dem_ville"));
+        		  demande.setDem_description(resultSet.getString("dem_description"));
+        		  demande.setDate_debut(resultSet.getString("date_debut"));
+        		  demande.setDate_fin(resultSet.getString("date_fin"));
+        		  
+        		  demande.setFilename(resultSet.getString("filename"));
+        		  demande.setPath(resultSet.getString("path"));
+        		  
+        		  
+        		  demande.setDem_statut(resultSet.getString("dem_statut"));
+        		  demande.setDem_type(resultSet.getString("dem_type"));
+        		  demande.setMontant_but(resultSet.getDouble("montant_but"));
+        		  demande.setMontant_vrai(resultSet.getDouble("montant_vrai"));
+        		  demande.setNbBenevoles_but(resultSet.getInt("nbBenevoles_but"));
+        		  demande.setNbBenevoles_vrai(resultSet.getInt("nbBenevoles_vrai"));
+        		  demande.setHeure_debut(resultSet.getString("heure_debut"));
+        		  demande.setHeure_fin(resultSet.getString("heure_fin"));
+        		  demande.setAdresse_benevolat(resultSet.getString("adresse_benevolat"));
+        		  demande.setRating(resultSet.getInt("rating"));
+        		  
+        		  demandes.add(demande);
+        	   
+           }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return demandes;
+	}
+
+
+
+	@Override
+	public List<Demande> getDemandeByStatut(String statut) {
+		List<Demande> demandes=new ArrayList<Demande>();
+		String query = "SELECT * FROM DEMANDE WHERE dem_type='"+statut+"'";
+		Connection connection= SingletonConnection.getConnection();
+		try {
+			PreparedStatement ps=connection.prepareStatement(query);
+            
+            ResultSet resultSet = ps.executeQuery(query);
+            while(resultSet.next()) {
+        	   	  Demande demande = new Demande();
+        		  demande.setDem_id(resultSet.getInt("dem_id"));
+        		  demande.setDemandeur_id(resultSet.getInt("demandeur_id"));
+        		  demande.setDem_titre(resultSet.getString("dem_titre"));
+        		  demande.setDem_ville(resultSet.getString("dem_ville"));
+        		  demande.setDem_description(resultSet.getString("dem_description"));
+        		  demande.setDate_debut(resultSet.getString("date_debut"));
+        		  demande.setDate_fin(resultSet.getString("date_fin"));
+        		  
+        		  demande.setFilename(resultSet.getString("filename"));
+        		  demande.setPath(resultSet.getString("path"));
+        		  
+        		  
+        		  demande.setDem_statut(resultSet.getString("dem_statut"));
+        		  demande.setDem_type(resultSet.getString("dem_type"));
+        		  demande.setMontant_but(resultSet.getDouble("montant_but"));
+        		  demande.setMontant_vrai(resultSet.getDouble("montant_vrai"));
+        		  demande.setNbBenevoles_but(resultSet.getInt("nbBenevoles_but"));
+        		  demande.setNbBenevoles_vrai(resultSet.getInt("nbBenevoles_vrai"));
+        		  demande.setHeure_debut(resultSet.getString("heure_debut"));
+        		  demande.setHeure_fin(resultSet.getString("heure_fin"));
+        		  demande.setAdresse_benevolat(resultSet.getString("adresse_benevolat"));
+        		  demande.setRating(resultSet.getInt("rating"));
+        		  
+        		  demandes.add(demande);
+        	   
+           }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return demandes;
+	}
+
+
+
+	@Override
+	public List<Demande> getDemandeByRating() {
+		List<Demande> demandes=new ArrayList<Demande>();
+		String query = "SELECT * FROM DEMANDE ORDER BY rating DESC";
+		Connection connection= SingletonConnection.getConnection();
+		try {
+			PreparedStatement ps=connection.prepareStatement(query);
+            
+            ResultSet resultSet = ps.executeQuery(query);
+            while(resultSet.next()) {
+        	   	  Demande demande = new Demande();
+        		  demande.setDem_id(resultSet.getInt("dem_id"));
+        		  demande.setDemandeur_id(resultSet.getInt("demandeur_id"));
+        		  demande.setDem_titre(resultSet.getString("dem_titre"));
+        		  demande.setDem_ville(resultSet.getString("dem_ville"));
+        		  demande.setDem_description(resultSet.getString("dem_description"));
+        		  demande.setDate_debut(resultSet.getString("date_debut"));
+        		  demande.setDate_fin(resultSet.getString("date_fin"));
+        		  
+        		  demande.setFilename(resultSet.getString("filename"));
+        		  demande.setPath(resultSet.getString("path"));
+        		  
+        		  
+        		  demande.setDem_statut(resultSet.getString("dem_statut"));
+        		  demande.setDem_type(resultSet.getString("dem_type"));
+        		  demande.setMontant_but(resultSet.getDouble("montant_but"));
+        		  demande.setMontant_vrai(resultSet.getDouble("montant_vrai"));
+        		  demande.setNbBenevoles_but(resultSet.getInt("nbBenevoles_but"));
+        		  demande.setNbBenevoles_vrai(resultSet.getInt("nbBenevoles_vrai"));
+        		  demande.setHeure_debut(resultSet.getString("heure_debut"));
+        		  demande.setHeure_fin(resultSet.getString("heure_fin"));
+        		  demande.setAdresse_benevolat(resultSet.getString("adresse_benevolat"));
+        		  demande.setRating(resultSet.getInt("rating"));
+        		  
+        		  demandes.add(demande);
+        	   
+           }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return demandes;
+	}
+
+
+
+	@Override
+	public List<Demande> getDemandeByVille(String ville) {
+		List<Demande> demandes=new ArrayList<Demande>();
+		String query = "SELECT * FROM DEMANDE WHERE dem_type='"+ville+"'";
+		Connection connection= SingletonConnection.getConnection();
+		try {
+			PreparedStatement ps=connection.prepareStatement(query);
+            
+            ResultSet resultSet = ps.executeQuery(query);
+            while(resultSet.next()) {
+        	   	  Demande demande = new Demande();
+        		  demande.setDem_id(resultSet.getInt("dem_id"));
+        		  demande.setDemandeur_id(resultSet.getInt("demandeur_id"));
+        		  demande.setDem_titre(resultSet.getString("dem_titre"));
+        		  demande.setDem_ville(resultSet.getString("dem_ville"));
+        		  demande.setDem_description(resultSet.getString("dem_description"));
+        		  demande.setDate_debut(resultSet.getString("date_debut"));
+        		  demande.setDate_fin(resultSet.getString("date_fin"));
+        		  
+        		  demande.setFilename(resultSet.getString("filename"));
+        		  demande.setPath(resultSet.getString("path"));
+        		  
+        		  
+        		  demande.setDem_statut(resultSet.getString("dem_statut"));
+        		  demande.setDem_type(resultSet.getString("dem_type"));
+        		  demande.setMontant_but(resultSet.getDouble("montant_but"));
+        		  demande.setMontant_vrai(resultSet.getDouble("montant_vrai"));
+        		  demande.setNbBenevoles_but(resultSet.getInt("nbBenevoles_but"));
+        		  demande.setNbBenevoles_vrai(resultSet.getInt("nbBenevoles_vrai"));
+        		  demande.setHeure_debut(resultSet.getString("heure_debut"));
+        		  demande.setHeure_fin(resultSet.getString("heure_fin"));
+        		  demande.setAdresse_benevolat(resultSet.getString("adresse_benevolat"));
+        		  demande.setRating(resultSet.getInt("rating"));
+        		  
+        		  demandes.add(demande);
+        	   
+           }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return demandes;
+	}
+
 }
