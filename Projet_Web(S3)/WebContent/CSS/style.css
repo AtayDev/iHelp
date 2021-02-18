@@ -1,0 +1,617 @@
+html, body, div{
+	padding:0;
+}
+
+body{
+	margin: 0;
+	color:#999999;
+	font-family: 'Quicksand', sans-serif;
+}
+/*-----------Greeting et Voila------------------------------*/
+.greeting{
+	width:100%;
+	height:300px;
+	background-color: #f4f9f9;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+	color:black;
+	
+}
+.Voila{
+	width:100%;
+	height:150px;
+	background-color: #fbf8f6;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+	background-color:white;
+	color:black;
+}
+
+/*---------------------Header and it's Contents-------------------*/
+.header{
+	width:auto;
+	background: #393e46;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	position: -webkit-sticky;
+  	top:0;
+  	z-index: 4;
+  	font-family: 'Quicksand', sans-serif;
+}
+li,a{
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #edf0f1;
+	text-decoration: none;
+}
+.logo{
+	max-height: 80px;
+	max-width: 80px;
+	padding: 10px;
+	url:"https://ihelp.group/wp-content/uploads/2020/06/ihelp-icon-.png";
+}
+.nav_links{
+	list-style: none;
+}
+
+.nav_links li{
+	display: inline-block;
+	padding: 10px 10px;
+}
+.nav_links li a{
+	transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover {
+	color:#0088a9;
+}
+/*-------------Espaces---------------------*/
+.espaces{
+	display:flex;
+	height:300px;
+	text-align:center;
+	padding-top:30px 0;
+	background: rgb(131,255,255);
+	background: linear-gradient(90deg, rgba(131,255,255,1) 0%, rgba(29,193,246,1) 100%);
+}
+.svg-waves{
+	background: rgb(131,255,255);
+	background: linear-gradient(90deg, rgba(131,255,255,1) 0%, rgba(29,193,246,1) 100%);
+}
+
+
+.espace-association{
+	
+	width:50%;
+	
+}
+
+.espace-association-image{
+	height:100px;
+	width:100px;
+	border:solid black;
+	border-radius: 50%;
+	margin-left:30px;
+	margin-top: -50px;
+}
+.espace-donateur{
+	
+	width:50%;
+}
+.espace-donateur-image{
+	height:100px;
+	width:100px;
+	border:solid black;
+	border-radius: 50%;
+	margin-left:30px;
+	margin-top: -50px;
+}
+/*-----------Pourquoi--------------------------*/
+.pourquoi{
+	text-align: center;
+	background-color: #fbf8f6;
+	height:300px;
+	width:auto;
+	color: black;
+	padding-top:100px;
+}
+hr{
+	width:50%;
+	text-align: center;
+}
+/* p{
+	margin-left:25%;
+	margin-right:25%;
+	margin-top:50px;
+} */
+/*--------------------Footer-------------------------------*/
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+
+https://epicbootstrap.com/snippets/footer-dark
+
+/*------------------Card Section-----------------------------*/
+img {
+  height: auto;
+  max-width: auto;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color:rgba(0,136,169,1);
+  border: 1px solid @gray-light;
+  border-radius: 1rem;
+  color: @gray-dark;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  background:#e5e5e5;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  width: 600px;
+}
+
+.card {
+  
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &:hover {
+    .card__image {
+      filter: contrast(100%);
+    }
+  }
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+ 
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  //filter: saturate(180%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  &::before {
+    content: "";
+	  display: block;
+    padding-top: 56.25%; // 16:9 aspect ratio
+  }
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; // 3:2 aspect ratio
+    }
+  }
+}
+.card__title {
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  color:black;
+}
+/*-----------------------Sign Up----------------------------------------*/
+.content{
+	background:white ;
+	z-index: 2;
+	padding-top:50px;
+	padding-bottom: 50px;
+	background-image:url("https://images.squarespace-cdn.com/content/v1/5e9b817775e0f12b450387be/1597459506527-Z4V1LCMIV89JKD5T826A/ke17ZwdGBToddI8pDm48kG1EFVNkDRnzYraltWxktXF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1Ud6MEkh2rZLPTP4o2YLZ8E_g28oED1QK3lPK4JxzQqvcGXbn_AsgcIKM85a6g3EoyA/whitebackground.jpg?format=2500w");
+
+ 	
+ }
+.sign-up-form{
+	
+	background-color:#0d7377 ;
+	border-radius:20px;
+	/*background-color:#393e46;*/
+    width:500px;
+    box-shadow:0 20px 40px -14px rgba(0,0,0,0.25);
+    background:#fff;
+    padding: 20px;
+   	margin: 2% auto 2%;
+    text-align:center;
+    height:auto;
+    z-index: 3;
+    background-image: url("https://www.setaswall.com/wp-content/uploads/2019/08/Whatsapp-Wallpaper-001-768x1365.jpg");
+    
+}
+.sign-up-form h1{
+	color:black;
+	margin-bottom:30px;
+}
+.sign-up-form p{
+	margin-top:0;
+}
+.input-box{
+	border-radius:20px;
+	padding:10px;
+	margin:5px 0;
+	width:80%;
+	border:1px solid #999;
+	outline:none;
+	font-size: 16px;
+    font-weight: bold;
+    font-family: 'Quicksand';
+}
+.input-box-contact{
+	border-radius:20px;
+	padding:10px;
+	margin:5px 0;
+	width:150px;
+	border:1px solid #999;
+	outline:none;
+}
+.creer-compte {
+	margin-top: 15px;
+	font-size: 16px;
+	color:white;
+	padding: 9px 25px;
+	background-color:#393e46;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+ .signup-btn {
+	font-size: 16px;
+	color:white;
+	padding: 9px 25px;
+	background-color:#393e46;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+.se-connecter{
+	color:white;
+	padding: 9px 25px;
+	background-color:#393e46;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+.signup-btn{
+	margin-top: 15px;
+
+}
+/*------------Social Media Icons---------------------*/
+.contact-link{
+	margin-top: 15px;
+	margin-bottom:15px;
+	font-size: 16px;
+	color:white;
+	padding: 9px 25px;
+	background-color:rgb(29,193,246);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+.social-contacts{
+	margin: 2% auto 2%;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #f40083;
+  color: white;
+}
+/*--------------------Consulter ses demandes-------------------------------*/
+.table-demandes{
+	/*position:absolute;*/
+	top: 18%;
+	width:auto;
+	height:auto;
+	margin-left: 35px;
+	margin-right: 35px;
+	text-align:center;
+	border-collapse: collapse;
+	border-spacing:0; 
+	overflow-x:scroll;
+	box-shadow:0 5px 12px rgba(32,32,32,0.3);
+	border-radius:20px;
+	background:#b088f9;
+	color:black;
+	
+}
+.table-demandes th{
+	color:white;
+	text-transform: uppercase;
+	padding:12px 15px;
+}
+.table-demandes td{
+	padding:12px 15px;
+}
+.header-consult-demandes{
+	width:150%;
+	background: #393e46;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	position: -webkit-sticky;
+  	top:0;
+  	z-index:3;
+}
+.content-consult-demandes{
+	background:#0d7377 ;
+	z-index: 1;
+	padding-top:50px;
+	padding-bottom: 50px;
+	width:150%;
+}
+.footer-consult-demandes{
+	width:150%;
+	background: #c7cfb7;
+	height:200px;
+	z-index: 3;
+}
+/*----------Moving text-------------------*/
+.ml11 {
+  font-weight: 700;
+  font-size: 3.5em;
+  font-family: 'Quicksand', sans-serif;
+  color:rgb(29,193,246);
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+
+.ml11 .line1 { 
+  top: 0; 
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+/*-----------------------About Section----------------------------------*/
+.about-card{
+	
+	
+	background-color:#0d7377 ;
+	border-radius:20px;
+	/*background-color:#393e46;*/
+    width:500px;
+    box-shadow:0 0 3px 0 rgba(0,0,0,0.3);
+    background:#fff;
+    padding: 20px;
+   	margin: 2% auto 2%;
+    text-align:center;
+    height:330px;
+    z-index: 3;
+  
+    
+}
+/*--------------------Pop Up--------------------------------------*/
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_fricc {
+    cursor: pointer;
+    
+    display: inline-block;
+    
+    
+    margin-top: 15px;
+	font-size: 16px;
+	color:white;
+	padding: 9px 25px;
+	background-color:rgb(29,193,246);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	text-align:center;
+    
+}

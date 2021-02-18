@@ -1,0 +1,71 @@
+
+
+CREATE DATABASE jeeDB;
+
+use jeeDB;
+
+
+
+CREATE TABLE ASSOCIATION(
+ass_id INT PRIMARY KEY AUTO_INCREMENT,
+ass_name VARCHAR(50),
+ass_email VARCHAR(50),
+ass_password VARCHAR(50),
+ass_telephone VARCHAR(50),
+ass_adresse VARCHAR(50),
+ass_ville VARCHAR(50),
+ass_description VARCHAR(100),
+ass_rib VARCHAR(50)
+)
+
+
+CREATE TABLE DONATEUR(
+dona_id INT PRIMARY KEY AUTO_INCREMENT,
+dona_email VARCHAR(100),
+dona_password VARCHAR(50),
+dona_fname VARCHAR(50),
+dona_lname VARCHAR(50),
+dona_ville INT,
+dona_telephone VARCHAR(50)
+)
+
+CREATE TABLE DEMANDE(
+dem_id int PRIMARY KEY AUTO_INCREMENT,
+nom_ass VARCHAR(50),
+dem_titre VARCHAR(50),
+dem_description VARCHAR(100),
+dem_ville VARCHAR(50),
+date_debut VARCHAR(50),
+date_fin VARCHAR(50),
+dem_statut VARCHAR(50),
+dem_type VARCHAR(50),
+montant_but DOUBLE,
+montant_vrai DOUBLE,
+nbBenevoles_but DOUBLE,
+nbBenevoles_vrai DOUBLE,
+heure_debut VARCHAR(50),
+heure_fin VARCHA(50),  
+adresse_benevolat VARCHAR(50),
+demandeur_id INT,
+rating INT,
+filename VARCHAR(100),
+path VARCHAR(100)
+)
+
+CREATE TABLE PARTICIPATIONF(
+id_part_f INT PRIMARY KEY AUTO_INCREMENT,
+id_part_donateur INT,
+id_part_demande INT,
+montant_part double
+)
+
+CREATE TABLE PARTICIPATIONB(
+id_part_b INT PRIMARY KEY AUTO_INCREMENT,
+id_part_donateur INT,
+id_part_demande INT,
+benevole_part INT
+)
+
+
+
+
