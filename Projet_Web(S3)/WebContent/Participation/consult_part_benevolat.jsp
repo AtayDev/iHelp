@@ -8,13 +8,14 @@
 <meta charset="UTF-8">
 <title>Mes Benevolats</title>
 </head>
+<body>
 		<div class="header">
 			<img class="logo" src="https://ihelp.group/wp-content/uploads/2020/06/ihelp-icon-.png" alt="logo">
 			<nav>
 				<ul class="nav_links">
 					<li><a href="hey.consult_part_financement">Mes Financements</a></li>
 					<li><a href="hey.consult_part_benevolat">Mes Benevolats</a></li>
-					<li><a href="#">Mon profile</a></li>
+					<li><a href="hey.profile_donateur_servlet">Mon profile</a></li>
 				</ul>
 			</nav>
 			<a class="contact-link" href="Yes.auth_dona">Sign Out</a>
@@ -26,7 +27,7 @@
 		
 			<c:forEach items="${partB_List}" var="d">
 				<div class="about-card" style="text-align:left;width:80%;height:auto;">
-					<p style="font-size:20px;">Reference du Projet:${d.id_part_b}</p>
+					<p style="font-size:20px;">Code du participation:${d.id_part_b}</p>
 					<p style="font-size:20px;" >Benevolat:${d.benevole_part}</p>
 					
 				</div>
@@ -40,3 +41,6 @@
 		
 		
 		</div>
+		<%@ include file="../Home/Footer.jsp" %>
+</body>
+</html>

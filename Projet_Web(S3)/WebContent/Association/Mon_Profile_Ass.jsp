@@ -26,14 +26,14 @@
 					
 			<c:set var = "d" scope = "session" value = "${ass_Profile}"/>
 				<div class="about-card" style="text-align:left;width:80%;height:auto;">
-						<p style="font-size:20px;" >Nom:${d.idAss}</p>
-						<p style="font-size:20px;">Email:${d.emailAss}</p>
-						<p style="font-size:20px;">Password:${d.passwordAss}</p>
-						<p style="font-size:20px;">Telephone:${d.telephoneAss}</p>
-						<p style="font-size:20px;">Adresse:${d.adresseAss}</p>
-						<p style="font-size:20px;">Ville:${d.villeAss}</p>
-						<p style="font-size:20px;">RIB:${d.ribAss}</p>
-						<p style="font-size:20px;">Description:${d.descriptionAss}</p>
+						<p style="font-size:20px;"><b>Nom</b>:${d.idAss}</p>
+						<p style="font-size:20px;"><b>Email</b>:${d.emailAss}</p>
+						<p style="font-size:20px;"><b>Password</b>:${d.passwordAss}</p>
+						<p style="font-size:20px;"><b>Telephone</b>:${d.telephoneAss}</p>
+						<p style="font-size:20px;"><b>Adresse</b>:${d.adresseAss}</p>
+						<p style="font-size:20px;"><b>Ville</b>:${d.villeAss}</p>
+						<p style="font-size:20px;"><b>RIB</b>:${d.ribAss}</p>
+						<p style="font-size:20px;"><b>Description</b>:${d.descriptionAss}</p>
 				</div>
 					<div class="sign-up-form">	
 						<form  action="Yes.profile_association_servlet" method="post">
@@ -53,3 +53,8 @@
 			</div>
 		
 		</div>
+
+
+		<%@ include file="../Home/Footer.jsp" %>	
+</body>
+</html>

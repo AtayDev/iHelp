@@ -21,12 +21,13 @@ body{
 .Voila{
 	width:100%;
 	height:150px;
-	background-color: #fbf8f6;
+	
 	display: flex;
   	justify-content: center;
   	align-items: center;
 	background-color:white;
 	color:black;
+	
 }
 
 /*---------------------Header and it's Contents-------------------*/
@@ -266,13 +267,11 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  &:hover {
-    .card__image {
-      filter: contrast(100%);
-    }
-  }
+ transition: transform .2s;
 }
-
+.card:hover{
+	 transform: scale(1.1);
+}
 .card__content {
   display: flex;
   flex: 1 1 auto;
@@ -330,19 +329,18 @@ img {
  }
 .sign-up-form{
 	
-	background-color:#0d7377 ;
+	
 	border-radius:20px;
 	/*background-color:#393e46;*/
     width:500px;
     box-shadow:0 20px 40px -14px rgba(0,0,0,0.25);
-    background:#fff;
+   
     padding: 20px;
    	margin: 2% auto 2%;
     text-align:center;
     height:auto;
     z-index: 3;
-    background-image: url("https://www.setaswall.com/wp-content/uploads/2019/08/Whatsapp-Wallpaper-001-768x1365.jpg");
-    
+	background:rgb(29,193,246);    
 }
 .sign-up-form h1{
 	color:black;
@@ -389,8 +387,12 @@ img {
 	border: none;
 	border-radius: 50px;
 	cursor: pointer;
-	transition: all 0.3s ease 0s;
+	transition: transform .05s;
 }
+ .signup-btn:hover{
+ 	transform: scale(1.1);
+ }
+
 .se-connecter{
 	color:white;
 	padding: 9px 25px;
@@ -616,6 +618,29 @@ img {
     
 }
 /*--------------------Rating Stars---------------*/
-.rateyo{
-	margin-right:100px;
+.jq-ry-group-wrapper{
+	margin-top:10px;
+	margin-left: 145px;
 }
+.result{
+	color:black;
+	display:block;
+}
+/*------------------Filter Container-----------------------*/
+.filter-container{
+	display:flex;
+	flex-wrap: nowrap;
+	justify-content:space-between;
+}
+.content-donateur{
+	background:white ;
+	z-index: 2;
+	padding-top:50px;
+	padding-bottom: 50px;
+	background:#e5e5e5;
+	color:rgb(29,193,246);
+	font-weight: 700;
+  	font-size: 3.5em;
+  	font-family: 'Quicksand', sans-serif;
+ 	text-align:center;
+ }

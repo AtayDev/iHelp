@@ -26,12 +26,12 @@
 					
 			<c:set var = "d" scope = "session" value = "${donateur_Profile}"/>
 				<div class="about-card" style="text-align:left;width:80%;height:auto;">
-						<p style="font-size:20px;" >Prénom":${d.dona_fname}</p>
-						<p style="font-size:20px;">Nom:${d.dona_lname}</p>
-						<p style="font-size:20px;">${d.dona_email}</p>
-						<p style="font-size:20px;">${d.dona_password}</p>
-						<p style="font-size:20px;">${d.dona_ville}</p>
-						<p style="font-size:20px;">${d.dona_telephone}</p>
+						<p style="font-size:20px;color:black;"><b>Prénom</b>:${d.dona_fname}</p>
+						<p style="font-size:20px;color:black;"><b>Nom</b>:${d.dona_lname}</p>
+						<p style="font-size:20px;color:black;"><b>Email</b>:${d.dona_email}</p>
+						<p style="font-size:20px;color:black;"><b>Mot de passe</b>:${d.dona_password}</p>
+						<p style="font-size:20px;color:black;"><b>Ville</b>:${d.dona_ville}</p>
+						<p style="font-size:20px;color:black;"><b>Telephone</b>:${d.dona_telephone}</p>
 				</div>
 			
 				<div class="sign-up-form">	
@@ -47,4 +47,7 @@
 					</form> 
 				</div>
 			
-		</div>		
+		</div>
+		<%@ include file="../Home/Footer.jsp" %>	
+</body>
+</html>
