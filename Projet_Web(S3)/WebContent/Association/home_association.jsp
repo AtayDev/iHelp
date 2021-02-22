@@ -92,25 +92,27 @@
 				<li class="cards__item">
 				    <div class="card">
 				      <img class="card__image card__image--fence" src="${d.filename}">
-				      <div class="card__content" id="p1">
+				      <div class="card__content">
+				   
 				       <div class="card__title">Reference:${d.dem_id}</div>
-				        <div class="card__title">Statut:${d.dem_statut}</div>
+				        <c:set var = "stst" scope = "session" value = "${d.dem_statut}"/>
+				         <c:choose>
+				         	<c:when test="${d.dem_statut=='Urgent'}">
+				         		 <div class="card__title" style="background:#ffaaaa; width:100%;">Statut:${d.dem_statut}</div>
+				         	</c:when>
+				         	<c:when test="${d.dem_statut=='Normal'}">
+				         		<div class="card__title" style="background:#e7e692; width:100%;">Statut:${d.dem_statut}</div>
+				         	</c:when>
+				         	<c:when test="${d.dem_statut=='Bas'}">
+				         		<div class="card__title" style="background:#99e792; width:100%;">Statut:${d.dem_statut}</div>
+				         	</c:when>
+				         </c:choose>
 				        <div class="card__title" >Type: ${d.dem_type}</div>
+				        
 				        <div class="card__title">Ville:${d.dem_ville}</div>
 				        <div class="card__title">Rating:${d.rating}<i class="fas fa-star" style="color:rgb(29,193,246);"></i></div>
 				        
-				         <c:set var = "statut" scope = "session" value = "${d.dem_statut}"/>
-				         <c:choose>
-				         	<c:when test="${d.dem_statut=='Urgent'}">
-				         		<script type="text/javascript">document.getElementById("p1").style.background = '#ffaaaa';</script>
-				         	</c:when>
-				         	<c:when test="${d.dem_statut=='Normal'}">
-				         		<script type="text/javascript">document.getElementById("p1").style.background = '#e7e692';</script>
-				         	</c:when>
-				         	<c:when test="${d.dem_statut=='Bas'}">
-				         		<script type="text/javascript">document.getElementById("p1").style.background = '#99e792';</script>
-				         	</c:when>
-				         </c:choose>
+				         
 				        
 				        <c:set var = "salary" scope = "session" value = "${d.dem_type}"/>
 				        <c:choose>
@@ -121,14 +123,17 @@
 				        
 							</c:when>
 							<c:when test="${d.dem_type=='Benevolat'}">
-								<div class="card__title">Nb Benevoles Demandé:${nbBenevoles_but} </div>
-								<div class="card__title">Nb Benevoles Accumulé:${nbBenevoles_vrai} </div>
+								<div class="card__title">Nb Benevoles Demandé:${d.nbBenevoles_but} </div>
+								<div class="card__title">Nb Benevoles Accumulé:${d.nbBenevoles_vrai} </div>
+								<div class="card__title">Heure Début de l'événement:${d.heure_debut} </div>
+								<div class="card__title">Heure Fin de l'événement:${d.heure_fin} </div>
+								<div class="card__title">Adresse de l'événement:${d.adresse_benevolat} </div>
 							</c:when>
 				        
 				        
 				        </c:choose>
 			
-				        <p class="card__text"><b>Description</b>:${d.dem_description } </p>
+				        <p class="card__text"><b>Description</b>: ${d.dem_description } </p>
 				       
 				        
 				      	 

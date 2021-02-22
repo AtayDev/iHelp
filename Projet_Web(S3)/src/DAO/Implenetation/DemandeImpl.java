@@ -246,7 +246,7 @@ public class DemandeImpl implements IDemande {
 	@Override
 	public List<Demande> getDemandeByStatut(String statut) {
 		List<Demande> demandes=new ArrayList<Demande>();
-		String query = "SELECT * FROM DEMANDE WHERE dem_type='"+statut+"'";
+		String query = "SELECT * FROM DEMANDE WHERE dem_statut='"+statut+"'";
 		Connection connection= SingletonConnection.getConnection();
 		try {
 			PreparedStatement ps=connection.prepareStatement(query);
@@ -338,7 +338,7 @@ public class DemandeImpl implements IDemande {
 	@Override
 	public List<Demande> getDemandeByVille(String ville) {
 		List<Demande> demandes=new ArrayList<Demande>();
-		String query = "SELECT * FROM DEMANDE WHERE dem_type='"+ville+"'";
+		String query = "SELECT * FROM DEMANDE WHERE dem_ville='"+ville+"'";
 		Connection connection= SingletonConnection.getConnection();
 		try {
 			PreparedStatement ps=connection.prepareStatement(query);

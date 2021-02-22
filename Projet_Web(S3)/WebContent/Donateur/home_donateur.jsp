@@ -94,7 +94,7 @@
 			<c:forEach items="${demandesList}" var="d">
 				<li class="cards__item">
 				    <div class="card" >
-				      <img class="card__image card__image--fence" src="${d.filename}">
+				      <img class="card__image" src="${d.filename}">
 				      <div class="card__content">
 				       <div class="card__title">Reference:${d.dem_id}</div>
 				        <div class="card__title">Statut:${d.dem_statut}</div>
@@ -112,12 +112,15 @@
 							<c:when test="${d.dem_type=='Benevolat'}">
 								<div class="card__title">Nb Benevoles Demandé:${nbBenevoles_but} </div>
 								<div class="card__title">Nb Benevoles Accumulé:${nbBenevoles_vrai} </div>
+								<div class="card__title">Heure Début de l'événement:${d.heure_debut} </div>
+								<div class="card__title">Heure Fin de l'événement:${d.heure_fin} </div>
+								<div class="card__title">Adresse de l'événement:${d.adresse_benevolat} </div>
 							</c:when>
 				        
 				        
 				        </c:choose>
 			
-				        <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+				        <p class="card__text"><b>Description</b>: ${d.dem_description} </p>
 				        
 				         <c:choose>
 							 <c:when test="${d.dem_type=='Financement'}">

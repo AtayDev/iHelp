@@ -26,22 +26,38 @@
 			<div class="about-card" style="text-align:left;width:80%;height:auto;">
 			<h1>Demande numero ${d.dem_id}<img alt="logo" src="${d.filename}" style="width:50%;float:right;"></h1>
 						
-						<p style="font-size:20px;">ID:${d.dem_id}</p>
-						<p style="font-size:20px;" >Titre:${d.dem_titre}</p>
-						<p style="font-size:20px;">${d.dem_ville}</p>
-						<p style="font-size:20px;">${d.dem_description}</p>
-						<p style="font-size:20px;">${d.date_debut}</p>
-						<p style="font-size:20px;">${d.date_fin}</p>
-						<p style="font-size:20px;">${d.dem_statut}</p>
-						<p style="font-size:20px;">${d.dem_type}</p>
-						<p style="font-size:20px;">${d.montant_but}</p>
-						<p style="font-size:20px;">${d.montant_vrai}</p>
-						<p style="font-size:20px;">${d.nbBenevoles_but}</p>
-						<p style="font-size:20px;">${d.nbBenevoles_vrai}</p>
-						<p style="font-size:20px;">${d.heure_debut}</p>
-						<p style="font-size:20px;">${d.heure_fin}</p>
-						<p style="font-size:20px;">${d.adresse_benevolat}</p>
-						<p style="font-size:20px;">${d.rating}</p>
+						<p style="font-size:20px;"><b>Reference</b>: ${d.dem_id}</p>
+						<p style="font-size:20px;" ><b>Titre</b>: ${d.dem_titre}</p>
+						<p style="font-size:20px;"><b>Ville</b>: ${d.dem_ville}</p>
+						<p style="font-size:20px;"><b>Type</b>: ${d.dem_type}</p>
+						<p style="font-size:20px;"><b>Statut</b>: ${d.dem_statut}</p>
+						
+						<p style="font-size:20px;"><b>Description</b>: ${d.dem_description}</p>
+						
+						<c:set var = "salary" scope = "session" value = "${d.dem_type}"/>
+				        <c:choose>
+				        	<c:when test="${d.dem_type=='Financement'}">
+				        		
+				        		<p style="font-size:20px;"><b>Montant Demandé:${d.montant_but} DH</b></p>
+				        		<p style="font-size:20px;"><b>Montant Accumulé:${d.montant_vrai} DH</b> </p>
+				        
+							</c:when>
+							<c:when test="${d.dem_type=='Benevolat'}">
+								<p style="font-size:20px;"><b>Nb Benevoles Demandé</b>:${d.nbBenevoles_but}</p>
+								<p style="font-size:20px;"><b>Nb Benevoles Accumulé</b>:${d.nbBenevoles_vrai}</p>
+								<p style="font-size:20px;"><b>Heure Début de l'événement</b>:${d.heure_debut}</p>
+								<p style="font-size:20px;"><b>Heure Fin de l'événement</b>:${d.heure_fin}</p>
+								<p style="font-size:20px;"><b>Adresse de l'événement</b>:${d.adresse_benevolat}</p>
+							</c:when>
+				        
+				        
+				        </c:choose>
+						<p style="font-size:20px;"><b>Date Debut</b>: ${d.date_debut}</p>
+						<p style="font-size:20px;"><b>Date Fin<b>: ${d.date_fin}</p>
+						
+						
+						
+						<p style="font-size:20px;"><b>Rating</b>: ${d.rating} <i class="fas fa-star" style="color:rgb(29,193,246);"></i></p>
 			</div>
 			
 			
@@ -51,5 +67,6 @@
 		
 	</div>
 
+<script src="https://kit.fontawesome.com/aaf5c98b16.js"></script>	
 </body>
 </html>

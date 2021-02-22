@@ -30,7 +30,12 @@ public class filterByVille extends HttpServlet {
 		String ville=request.getParameter("ville");
 		demandes=demandeDAO.getDemandeByVille(ville);
 		
-		request.setAttribute("demandesByVille", demandes);
-		request.getRequestDispatcher("./Demande/demandesByVille.jsp").forward(request, response);
-	}
+		if(demandes != null) {
+			System.out.println(demandes);
+			request.setAttribute("demandesByVille", demandes);
+			request.getRequestDispatcher("./Demande/demandesByVille.jsp").forward(request, response);
+		}else {
+			System.out.println("Error with the filter By ville");
+		}
+		}
 }
