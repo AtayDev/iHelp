@@ -9,7 +9,7 @@ import DAO.SingletonConnection;
 import DAO.interfaces.IAssociation;
 import Models.Association;
 
-
+//new commit to try
 public class AssociationImpl implements IAssociation {
 @Override
 	public Association insertAssociation(Association ass) {
