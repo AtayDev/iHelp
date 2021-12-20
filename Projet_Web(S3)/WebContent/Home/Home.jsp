@@ -11,6 +11,8 @@
 <body>
 	 <div class="container">
 		<div class="header">
+			<!-- Added an h1 tag -->
+			<h1>I added this new h1 tag</h1>
 			<img class="logo" src="images/logoHero.png" alt="logo">
 			<nav>
 				<ul class="nav_links">
