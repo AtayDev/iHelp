@@ -14,4 +14,7 @@ public interface IDemande {
 	List<Demande> getDemandeByStatut(String statut);
 	List<Demande> getDemandeByRating();
 	List<Demande> getDemandeByVille(String ville);
+
+	//Add a new method to delete demande
+	public boolean deleteDemande(int id);
 }
